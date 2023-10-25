@@ -10,21 +10,23 @@ class App extends React.Component {
     this.state = {input :""};
     this.handleChange = this.handleChange.bind(this);
   }
+  
 
-  handleChange(event){
+
+   handleChange(event){
     this.setState(
      {input : event.target.value}
     );
-   }
+   } 
 
 render (){
   
   
   return (
-    <>
-    <Editor input={this.state.input} handleChange={this.handleChange}/>
-    <Previewer input={this.state.input} />
-    </>
+    <div className="bg-success-subtle">
+    <Editor  input={this.state.input} handleChange={this.handleChange}/>
+    <Previewer  className="my-5" input={this.state.input} />
+    </div>
   )
 }
 }
